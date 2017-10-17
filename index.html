@@ -21,10 +21,11 @@
 <body>
 
 	<div class="container-fluid well">
+ <!-- ========= Nav Start ==============	 -->
 		<div class="row well">
 			<nav class="navbar navbar-light bg-faded well">
 	  			<div class="col-sm-4 nav-left">
-		  			<a class="navbar-brand" href="#"><img src="#" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+		  			<a class="navbar-brand" href="#"><img src="images/icon.png" width="40" height="40" class="d-inline-block align-top" alt=""></a>
 		  			<h3>NavAPP</h3>
 		  		</div>
 		  		<div class="col-sm-offset-4 col-sm-4 nav-right">
@@ -36,14 +37,37 @@
 		  					<a href="#popular-trip">POPULAR TRIP</a>
 		  				</div>
 		  				<div class="col-sm-3">
-		  					<a href="">LOG IN</a>
+		  					<a href="#" id="log-in">LOG IN</a>
+		  					<!-- Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							  	<div class="modal-dialog" role="document">
+							    	<div class="modal-content">
+							      		<div class="modal-header">
+							        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        		<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							      		</div>
+								     	<div class="modal-body">
+								        	<form>
+								        		<input type="email" class="form-control name-input" placeholder="email or ID">
+	<!-- change to css later -->       			<br> 
+								        		<input type="password" class="form-control password-input" placeholder="password">
+								        	</form>
+								      	</div>
+								      	<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									        <button type="button" class="btn btn-primary">Save changes</button>
+								      	</div>
+							    	</div>
+							    </div>
+							</div>
 		  				</div>
 		  				<div class="col-sm-3">
 		  					<a href="">SIGN UP</a>
 		  				</div>
 		  		</div>
-			</nav>
+			</nav>		
 		</div>
+<!-- ============= Nav Bar END / MAIN CONTENT START =============  -->
 		<div class="row well">
 			<div class ="col-sm-offset-3 col-sm-6 serach-title well text-center">
 				<h1>SEARCH YOUR VACATION!</h1>
@@ -56,7 +80,7 @@
 					<input class="form-control end-location" type="text">
 				</div>
 				<div class="col-sm-2 well">
-					<div class="col-sm-6">
+					<div class="col-sm-6 text-center">
 						<button class="btn btn-success">+</button>
 					</div>
 					<div class="col-sm-6">
@@ -65,10 +89,13 @@
 				</div>
 			</form>
 		</div>
+<!-- ============== MAIN CONTENT END / HOW TO USE PAGE START ========== -->
 		<div id="how-to-use">
 		</div>
+<!-- ============== HOW TO USE PAGE END / POPULAR TRIP START ========== -->
 		<div id="popular-trip">
 		</div>
+<!-- ============== POPULAR TRIP END / FOOTER START ========== -->
 		<div class="row footer well">
 
 		</div>
