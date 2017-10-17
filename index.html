@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&libraries=places" async defer></script>
 
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -21,30 +23,54 @@
 	<div class="container-fluid well">
 		<div class="row well">
 			<nav class="navbar navbar-light bg-faded well">
-	  			<a class="navbar-brand" href="#">
-	    		<img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
-	    		NavAPP
-	  			</a>
+	  			<div class="col-sm-4 nav-left">
+		  			<a class="navbar-brand" href="#"><img src="#" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+		  			<h3>NavAPP</h3>
+		  		</div>
+		  		<div class="col-sm-offset-4 col-sm-4 nav-right">
+		  			<div class="row">
+		  				<div class="col-sm-3">
+		  					<a href="#how-to-use">HOW TO USE</a>
+		  				</div>
+		  				<div class="col-sm-3">
+		  					<a href="#popular-trip">POPULAR TRIP</a>
+		  				</div>
+		  				<div class="col-sm-3">
+		  					<a href="">LOG IN</a>
+		  				</div>
+		  				<div class="col-sm-3">
+		  					<a href="">SIGN UP</a>
+		  				</div>
+		  		</div>
 			</nav>
 		</div>
 		<div class="row well">
-			<div class ="col-sm-offset-3 col-sm-6 serach-title well">
-
+			<div class ="col-sm-offset-3 col-sm-6 serach-title well text-center">
+				<h1>SEARCH YOUR VACATION!</h1>
 			</div>
-			<div class="col-sm-offset-2 col-sm-4 well">
-
-			</div>
-			<div class="col-sm-4 well">
-
-			</div>
-			<div class="col-sm-1 well">
-				<div class="col-sm-6">
-					<button>+</button>
+			<form>
+				<div class="col-sm-offset-2 col-sm-4 well">
+					<input class="form-control start-location" type="text">
 				</div>
-				<div class="col-sm-6">
-					<button>SEARCH</button>
+				<div class="col-sm-4 well">
+					<input class="form-control end-location" type="text">
 				</div>
-			</div>
+				<div class="col-sm-2 well">
+					<div class="col-sm-6">
+						<button class="btn btn-success">+</button>
+					</div>
+					<div class="col-sm-6">
+						<button class="btn btn-primary btn-block">GO!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="how-to-use">
+		</div>
+		<div id="popular-trip">
+		</div>
+		<div class="row footer well">
+
 		</div>
 	</div>
 
