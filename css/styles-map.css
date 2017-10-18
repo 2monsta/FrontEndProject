@@ -1,0 +1,9 @@
+.point-a{
+	background-color: green;
+}
+.point-b{
+	background-color: red;
+}
+#map{
+	height: 100vh;
+}
