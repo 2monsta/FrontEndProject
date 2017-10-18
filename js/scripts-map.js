@@ -6,19 +6,22 @@ function mapfunction(){
 	var lng = [];
 	var latA = 40.0000;
 	var latB = -98.0000;
-
 	var myLatLng = {
 		lat: latA,
 		lng: latB
 	}
-
 	var map = new google.maps.Map(document.getElementById("map"), {
 		zoom: 4,
 		center: myLatLng
 	});
-	
-	var geocoder = new google.maps.Geocoder();
 
+
+
+
+	var onChangeHandler = function() {
+		calculateAndDisplayRoute(directionsService, directionsDisplay);
+	};
+	var geocoder = new google.maps.Geocoder();
 
 	function geocodeAddress(geocoder, resultsMap, addressStartEnd) {
 		lat = [];
@@ -58,6 +61,45 @@ function mapfunction(){
 			map.fitBounds(bounds);
 		}
 		calcRoute();
+
+		function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+			var routeMapStart = {
+				lat: lat[0],
+				lng: lng[0]
+			}
+			var routeMapEnd = {
+				lat: lat[1],
+				lng: lng[1]
+			}
+			var directionsService = new google.maps.DirectionsService;
+			var directionsDisplay = new google.maps.DirectionsRenderer;
+			directionsDisplay.setMap(map);
+			directionsService.route({
+				origin: routeMapStart,
+				destination: routeMapEnd,
+				travelMode: 'DRIVING'
+			},function(response, status) {
+				if (status === 'OK') {
+					   directionsDisplay.setDirections(response);
+				  } else {
+					   window.alert('Directions request failed due to ' + status);
+				  }
+			});
+		}
+		calculateAndDisplayRoute();
+
+
+		// var start = new google.maps.LatLng('37.7683909618184', '-122.51089453697205');
+		// var end = new google.maps.LatLng('41.850033', '-87.6500523');
+		// var request = {
+		//   origin:start, 
+		//   destination:end,
+		//   travelMode: google.maps.DirectionsTravelMode.DRIVING
+		// };
+		// directionsService.route(request, function(response, status) {
+		//    …
+		// }
+	
 	}, 500);
 
 
