@@ -1,6 +1,5 @@
-$(document).ready(function(){
-	//get local storage information
 
+function mapfunction(){
 	var addressStart  =localStorage.getItem("addressStart");
 	var addressEnd  =localStorage.getItem("addressEnd");
 
@@ -21,15 +20,15 @@ $(document).ready(function(){
 
 	function geocodeAddress(geocoder, resultsMap, addressStartEnd) {
 		geocoder.geocode({'address': addressStartEnd}, function(results, status) {
-		 	if(status === 'OK') {
+				if(status === 'OK') {
 				resultsMap.setCenter(results[0].geometry.location);
 				var marker = new google.maps.Marker({
 					map: resultsMap,
-			  		position: results[0].geometry.location
+						position: results[0].geometry.location
 				});
-		  	}else{
-				alert('Geocode was not successful for the following reason: ' + status);
-		  	}
+				}else{
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
 		});
-	  }
-});
+		}
+}
