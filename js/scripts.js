@@ -28,7 +28,9 @@ $(document).ready(()=>{
 
 
 
-
+	$(".search-form").submit((e)=>{
+		e.preventDefault();
+	});
 	initAutocomplete();
 	initAutocompleteEnd();
 })
