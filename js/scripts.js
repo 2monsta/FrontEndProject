@@ -1,6 +1,7 @@
 $(document).ready(()=>{
 	var google = window.google;
-	var address = [];
+	var addressStart = [];
+	var addressEnd = [];
 	var autoComplete;
 
 	function initAutocomplete() {
@@ -40,18 +41,27 @@ $(document).ready(()=>{
 	// });
 
 	$("#go-button").click(()=>{
+		localStorage.clear(addressStart);
+		localStorage.clear(addressEnd);
 		var start = $(".start-location").val();
 		console.log(start);
 		var end = $(".end-location").val();
-		var oldAddress = localStorage.getItem("address")
-		var info = JSON.parse(oldAddress);
-		if(info == null){
-			info = [];
+		var oldAddressStart = localStorage.getItem("addressStart");
+		var oldAddressEnd = localStorage.getItem("addressEnd");
+		var infoStart = JSON.parse(oldAddressStart);
+		var infoEnd = JSON.parse(oldAddressEnd);
+		if(infoStart == null){
+			infoStart = [];
 		}
-		info.push(start);
-		info.push(end);
-		var infoAsString = JSON.stringify(info);
-		localStorage.setItem("address", infoAsString);
+		if(infoEnd == null){
+			infoEnd = [];
+		}
+		infoStart.push(start);
+		infoEnd.push(end);
+		var infoAsStringStart = JSON.stringify(infoStart);
+		var infoAsStringEnd = JSON.stringify(infoEnd);
+		localStorage.setItem("addressStart", infoAsStringStart);
+		localStorage.setItem("addressEnd", infoAsStringEnd);
 	});
 	initAutocomplete();
 	initAutocompleteEnd();
