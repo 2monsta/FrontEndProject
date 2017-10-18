@@ -3,28 +3,32 @@ $(document).ready(()=>{
 	var zipcode = [];
 	var autoComplete;
 
-
-	$("#log-in").click(()=>{
-		$('#myModal').modal('show');
-	});
-
 	function initAutocomplete() {
 		// Create the autocomplete object, restricting the search to geographical
 		// location types.
 		autocomplete = new google.maps.places.Autocomplete(
 			/** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
 			{types: ['geocode']});
-
-		// When the user selects an address from the dropdown, populate the address
-		// fields in the form.
-		autocomplete.addListener('place_changed', fillInAddress);
+	}
+	function initAutocompleteEnd() {
+		// Create the autocomplete object, restricting the search to geographical
+		// location types.
+		autocomplete = new google.maps.places.Autocomplete(
+			/** @type {!HTMLInputElement} */(document.getElementById('autocomplete-end')),
+			{types: ['geocode']});
 	}
 
 
-	// var b = localStorage.getItem("watchList");
-	// console.log(b);
+
+	$("#log-in").click(()=>{
+		$('#myModal').modal('show');
+	});
 
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA484XJs4GCEbGtIIJnnDKyVBpfbWkcOy4&libraries=places"
-	async defer></script>
+
+
+
+
+	initAutocomplete();
+	initAutocompleteEnd();
 })
