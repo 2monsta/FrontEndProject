@@ -42,7 +42,14 @@ function mapfunction(){
 	setTimeout(function() {
 		a = (lat[0] + lat[1])/2;
 		b = (lng[0] + lng[1])/2;
+		var center = {
+			lat:a,
+			lng:b
+		}
+		map.setCenter(center);
 	}, 500);
+
+
 	console.log(a);
 	console.log(b);
 	geocodeAddress(geocoder, map, addressStart);
