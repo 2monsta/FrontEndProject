@@ -26,6 +26,7 @@ function mapfunction(){
 		geocoder.geocode({'address': addressStartEnd}, function(results, status) {
 			if(status === 'OK') {
 				resultsMap.setCenter(results[0].geometry.location);
+				// this coresponds with setTimeOut
 				lat.push(results[0].geometry.location.lat());
 				lng.push(results[0].geometry.location.lng());
 
