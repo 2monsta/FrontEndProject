@@ -4,10 +4,12 @@ function mapfunction(){
 	var addressEnd  =localStorage.getItem("addressEnd");
 	var lat = [];
 	var lng = [];
+	var a = 40.0000;
+	var b = -98.0000;
 
 	var myLatLng = {
-		lat: 40.0000,
-		lng: -98.0000
+		lat: a,
+		lng: b
 	}
 
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -37,6 +39,12 @@ function mapfunction(){
 		});
 	}
 
+	setTimeout(function() {
+		a = (lat[0] + lat[1])/2;
+		b = (lng[0] + lng[1])/2;
+	}, 500);
+	console.log(a);
+	console.log(b);
 	geocodeAddress(geocoder, map, addressStart);
 	geocodeAddress(geocoder, map, addressEnd);
 }
