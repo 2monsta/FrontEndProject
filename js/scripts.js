@@ -37,14 +37,28 @@ $(document).ready(()=>{
 		var info = JSON.parse(oldAddress);
 		if(info == null){
 			info = [];
-		}else{
-			info.push(start);
-			console.log(info);
-			info.push(end);
-			var infoAsString = JSON.stringify(info);
-			localStorage.setItem("address", infoAsString);
 		}
+		info.push(start);
+		info.push(end);
+		var infoAsString = JSON.stringify(info);
+		localStorage.setItem("address", infoAsString);
+		
 	});
+
+	$("#go-button").click(()=>{
+		var start = $(".start-location").val();
+		console.log(start);
+		var end = $(".end-location").val();
+		var oldAddress = localStorage.getItem("address")
+		var info = JSON.parse(oldAddress);
+		if(info == null){
+			info = [];
+		}
+		info.push(start);
+		info.push(end);
+		var infoAsString = JSON.stringify(info);
+		localStorage.setItem("address", infoAsString);
+	})
 	initAutocomplete();
 	initAutocompleteEnd();
 })
