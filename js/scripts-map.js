@@ -4,12 +4,12 @@ function mapfunction(){
 	var addressEnd  =localStorage.getItem("addressEnd");
 	var lat = [];
 	var lng = [];
-	var a = 40.0000;
-	var b = -98.0000;
+	var latA = 40.0000;
+	var latB = -98.0000;
 
 	var myLatLng = {
-		lat: a,
-		lng: b
+		lat: latA,
+		lng: latB
 	}
 
 	var map = new google.maps.Map(document.getElementById("map"), {
@@ -40,18 +40,27 @@ function mapfunction(){
 	}
 
 	setTimeout(function() {
-		a = (lat[0] + lat[1])/2;
-		b = (lng[0] + lng[1])/2;
+		latA = (lat[0] + lat[1])/2;
+		latB = (lng[0] + lng[1])/2;
 		var center = {
-			lat:a,
-			lng:b
+			lat:latA,
+			lng:latB
 		}
 		map.setCenter(center);
+		function calcRoute() {
+			var start = new google.maps.LatLng(lat[0], lng[0]);
+			//var end = new google.maps.LatLng(38.334818, -181.884886);
+			var end = new google.maps.LatLng(lat[1], lng[1]);
+			var bounds = new google.maps.LatLngBounds();
+			bounds.extend(start);
+			bounds.extend(end);
+			map.fitBounds(bounds);
+		}
+		calcRoute();
 	}, 500);
 
 
-	console.log(a);
-	console.log(b);
+
 	geocodeAddress(geocoder, map, addressStart);
 	geocodeAddress(geocoder, map, addressEnd);
 }
