@@ -15,11 +15,12 @@ $(document).ready(function(){
 
 	// convert addressStart to a lat and long
 	var geocoder = new google.maps.Geocoder();
-	geocodeAddress(geocoder, map);
+	geocodeAddress(geocoder, map, addressStart);
+	geocodeAddress(geocoder, map, addressEnd);
 	
 
-	function geocodeAddress(geocoder, resultsMap) {
-		geocoder.geocode({'address': addressStart}, function(results, status) {
+	function geocodeAddress(geocoder, resultsMap, addressStartEnd) {
+		geocoder.geocode({'address': addressStartEnd}, function(results, status) {
 		 	if(status === 'OK') {
 				resultsMap.setCenter(results[0].geometry.location);
 				var marker = new google.maps.Marker({
@@ -31,5 +32,4 @@ $(document).ready(function(){
 		  	}
 		});
 	  }
-
 });
