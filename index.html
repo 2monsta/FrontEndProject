@@ -74,10 +74,12 @@
 			</div>
 			<form>
 				<div class="col-sm-offset-2 col-sm-4 well">
-					<input class="form-control start-location" type="text">
+					<input class="form-control start-location" id="autocomplete" placeholder="Enter your address"
+					onFocus="geolocate()" type="text">
 				</div>
 				<div class="col-sm-4 well">
-					<input class="form-control end-location" type="text">
+					<input class="form-control end-location autocomplete" placeholder="Enter your address"
+					onFocus="geolocate()" type="text">
 				</div>
 				<div class="col-sm-2 well">
 					<div class="col-sm-6 text-center">
