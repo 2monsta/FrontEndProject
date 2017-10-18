@@ -1,4 +1,4 @@
-$(document).ready(()=>{
+function mapfunction(){
 	var google = window.google;
 	var addressStart = [];
 	var addressEnd = [];
@@ -65,4 +65,4 @@ $(document).ready(()=>{
 	});
 	initAutocomplete();
 	initAutocompleteEnd();
-})
+}
