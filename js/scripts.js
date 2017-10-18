@@ -23,27 +23,21 @@ $(document).ready(()=>{
 	$("#log-in").click(()=>{
 		$('#myModal').modal('show');
 	});
-
-
-
-
-
-	$(".search-form").submit((e)=>{
-		e.preventDefault();
-		var start = $(".start-location").val();
-		console.log(start);
-		var end = $(".end-location").val();
-		var oldAddress = localStorage.getItem("address")
-		var info = JSON.parse(oldAddress);
-		if(info == null){
-			info = [];
-		}
-		info.push(start);
-		info.push(end);
-		var infoAsString = JSON.stringify(info);
-		localStorage.setItem("address", infoAsString);
-		
-	});
+	// $(".search-form").submit((e)=>{
+	// 	e.preventDefault();
+	// 	var start = $(".start-location").val();
+	// 	console.log(start);
+	// 	var end = $(".end-location").val();
+	// 	var oldAddress = localStorage.getItem("address")
+	// 	var info = JSON.parse(oldAddress);
+	// 	if(info == null){
+	// 		info = [];
+	// 	}
+	// 	info.push(start);
+	// 	info.push(end);
+	// 	var infoAsString = JSON.stringify(info);
+	// 	localStorage.setItem("address", infoAsString);
+	// });
 
 	$("#go-button").click(()=>{
 		var start = $(".start-location").val();
@@ -58,7 +52,7 @@ $(document).ready(()=>{
 		info.push(end);
 		var infoAsString = JSON.stringify(info);
 		localStorage.setItem("address", infoAsString);
-	})
+	});
 	initAutocomplete();
 	initAutocompleteEnd();
 })
