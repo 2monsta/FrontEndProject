@@ -54,7 +54,6 @@ h2{
 	filter: opacity(.8)
 }
 .start-location{
-	
 }
 .about-container{
 	background-color:orange;
@@ -71,6 +70,10 @@ h2{
 }
 .about-boxes{
 	height: 80%
+}
+.about-boxes img{
+	height: 200px;
+	width: 200px
 }
 /* ==== BODY END ===== */
 
