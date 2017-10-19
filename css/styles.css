@@ -69,7 +69,8 @@ h2{
 	background-color: white 
 }
 .about-boxes{
-	height: 80%
+	height: 80%;
+	margin-top: 160px;
 }
 .about-boxes img{
 	height: 200px;
@@ -93,6 +94,7 @@ h2{
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: hidden;
 }
 #vidtop-content {
 	top: 0;
