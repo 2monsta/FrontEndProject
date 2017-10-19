@@ -10,10 +10,14 @@
 /* ===== HEADER ===== */
 #header-navapp{
 	font-size: 4em;
+	font-family: 'Fascinate Inline', cursive;
 }
 .nav-right{
 	margin-top: 25px;
-
+}
+.nav-logo{
+	color: rgb(40, 40, 158);
+	font-family: 'Fascinate Inline', cursive;
 }
 .a-logo{
 	color: red
@@ -30,7 +34,10 @@
 	margin-top: 100px
 }
 .search-title{
-	margin-bottom: 50px
+	margin-bottom: 50px;
+	font-family: 'Courgette', cursive;
+	letter-spacing: .6em
+	
 }
 .start-location, .end-location{
 	height: 46px;
