@@ -6,7 +6,9 @@
 .container-fluid{
 	height: 100vh;	
 }
-
+h2{
+	font-family: 'Baloo Chettan', cursive;
+}
 /* ===== HEADER ===== */
 #header-navapp{
 	font-size: 4em;
@@ -49,7 +51,7 @@
 }
 .about-container{
 	background-color:orange;
-	background-image: url('https://wallpapersite.com/images/wallpapers/road-trip-2560x1440-countryside-4k-6815.jpg');
+	background-image: url('../images/trip1.jpeg');
 	background-size: cover
 
 }
@@ -57,9 +59,17 @@
 	background-color:blue
 }
 #about, #popular-trip{
-	height: 100px;
+	height: 63px;
 }
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 70px solid white;
+	margin: auto;
 
+}
 /* ==== BODY END ===== */
 
 
