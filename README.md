@@ -4,7 +4,7 @@
 - Centering the map after getting two locations
 - Getting the zoom to be correct according to distance
 - route directions
-
+- embeded video inside front page
 
 
 ### Things to Improve
