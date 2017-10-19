@@ -20,6 +20,28 @@
 
 </head>
 <body>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="email" class="form-control name-input" placeholder="email or ID">
+							<br> <!-- change to css later -->  
+						<input type="password" class="form-control password-input" placeholder="password">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container-fluid front-page">
 		<!-- ========= Nav Start ==============	 -->
@@ -53,28 +75,6 @@
 						</div>
 						<div class="col-sm-3">
 							<a href="#" id="log-in">LOG IN</a>
-							<!-- Modal -->
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-										</div>
-										<div class="modal-body">
-											<form>
-												<input type="email" class="form-control name-input" placeholder="email or ID">
-													<br> <!-- change to css later -->  
-												<input type="password" class="form-control password-input" placeholder="password">
-											</form>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="col-sm-3">
 							<a href="">SIGN UP</a>
@@ -87,7 +87,7 @@
 			<div class="col-sm-12 text-center">
 				<h1 id="header-navapp"><span class="nav-logo">Nav</span><span class="a-logo">A</span><span class="p-logo">P</span><span class="p2-logo">P</span></h1>
 			</div>
-			<div class ="col-sm-offset-3 col-sm-6 search-title  text-center">
+			<div class ="col-sm-offset-3 col-sm-6 text-center" id="search-title">
 				<h3>Search Your Vacation!</h3>
 			</div>
 			<form class="search-form">
@@ -122,15 +122,15 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12 about-boxes text-center">
-				<div class="col-sm-4 about-block1">
+				<div class="col-sm-3 about-block1">
 					<img src="images/glass.png">
-					<h3>Research Destinations</h3>
+					<h3>Research Destinations</h3>	
 				</div>
-				<div class="col-sm-4 about-block2">
+				<div class="col-sm-3 about-block2">
 					<img src="images/map-marker.png">
 					<h3>Map Trip Destinations</h3>
 				</div>
-				<div class="col-sm-4 about-block3">
+				<div class="col-sm-3 about-block3">
 					<img src="images/food.png">
 					<h3>Find Nearby Restaurants</h3>
 				</div>

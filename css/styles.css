@@ -23,10 +23,12 @@ h2{
 }
 .nav-right{
 	margin-top: 25px;
+	font-weight: bold
 }
 .nav-logo{
 	color: rgb(40, 40, 158);
 	font-family: 'Fascinate Inline', cursive;
+	text-shadow: 5px 5px 3px rgba(118, 132, 150, 1);
 }
 .a-logo{
 	color: red
@@ -42,11 +44,10 @@ h2{
 .body-content{
 	margin-top: 100px
 }
-.search-title{
+#search-title{
 	margin-bottom: 50px;
 	font-family: 'Courgette', cursive;
-	letter-spacing: .6em
-	
+	letter-spacing: .6em;
 }
 .start-location, .end-location{
 	height: 46px;
@@ -64,6 +65,11 @@ h2{
 .trip-container{
 	background-color:lightgray
 }
+/* About Section */
+h3{
+	color: white;
+	font-weight: bold
+}
 #about, #popular-trip{
 	height: 63px;
 	background-color: white 
@@ -71,6 +77,21 @@ h2{
 .about-boxes{
 	height: 80%;
 	margin-top: 160px;
+	
+}
+.about-block1, .about-block2, .about-block3{
+
+	background:	rgba(255,255,224,0.5);
+	padding: 50px 
+}
+.about-block1{
+	margin-left: 90px;
+}
+.about-block2{
+	margin-left: 110px;
+}
+.about-block3{
+	margin-left: 100px;
 }
 .about-boxes img{
 	height: 200px;
