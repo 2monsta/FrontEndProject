@@ -1,14 +1,16 @@
-.container-fluid{
-	height: 100vh;
+.front-page{
 	background-image: url('../images/roadtrip.jpeg');
 	background-size: cover;
 	
 }
-#header-navapp{
-	font-size: 4em;
+.container-fluid{
+	height: 100vh;	
 }
 
 /* ===== HEADER ===== */
+#header-navapp{
+	font-size: 4em;
+}
 .nav-right{
 	margin-top: 25px;
 
@@ -38,10 +40,13 @@
 .start-location{
 	
 }
-
-
-
-
-
+.about-container{
+	background-color:orange
+}
+.trip-container{
+	background-color:blue
+}
 
 /* ==== BODY END ===== */
+
+
