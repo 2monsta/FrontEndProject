@@ -1,4 +1,24 @@
 .container-fluid{
 	height: 100vh;
 }
-
+.nav-right{
+	margin-top: 25px;
+}
+.a-logo{
+	color: red
+}
+.p-logo{
+	color: rgb(245, 245, 45)
+}
+.p2-logo{
+	color: lightgreen
+}
+.body-content{
+	margin-top: 100px
+}
+.search-title{
+	margin-bottom: 50px
+}
+.start-location, .end-location{
+	height: 46px
+}
