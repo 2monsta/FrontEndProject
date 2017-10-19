@@ -85,22 +85,25 @@ function mapfunction(){
 					   window.alert('Directions request failed due to ' + status);
 				  }
 			});
+
+			// PRINT address to the right
+			directionsDisplay.setMap(map);
+			directionsDisplay.setPanel(document.getElementById('info-box'));
+	   
+			var request = {
+			  	origin: routeMapStart, 
+			  	destination: routeMapEnd,
+			  	travelMode: google.maps.DirectionsTravelMode.DRIVING
+			};
+	   
+			directionsService.route(request, function(response, status) {
+			  	if (status == google.maps.DirectionsStatus.OK) {
+					directionsDisplay.setDirections(response);
+			 	}
+			});
 		}
 		calculateAndDisplayRoute();
-
-
-		// var start = new google.maps.LatLng('37.7683909618184', '-122.51089453697205');
-		// var end = new google.maps.LatLng('41.850033', '-87.6500523');
-		// var request = {
-		//   origin:start, 
-		//   destination:end,
-		//   travelMode: google.maps.DirectionsTravelMode.DRIVING
-		// };
-		// directionsService.route(request, function(response, status) {
-		//    …
-		// }
-	
-	}, 500);
+	}, 1000);
 
 
 
