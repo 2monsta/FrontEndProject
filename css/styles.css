@@ -48,10 +48,16 @@
 	
 }
 .about-container{
-	background-color:orange
+	background-color:orange;
+	background-image: url('https://wallpapersite.com/images/wallpapers/road-trip-2560x1440-countryside-4k-6815.jpg');
+	background-size: cover
+
 }
 .trip-container{
 	background-color:blue
+}
+#about, #popular-trip{
+	height: 100px;
 }
 
 /* ==== BODY END ===== */
