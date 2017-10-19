@@ -1,8 +1,17 @@
 .container-fluid{
 	height: 100vh;
+	background-image: url('../images/roadtrip.jpeg');
+	background-size: cover;
+	
 }
+#header-navapp{
+	font-size: 4em;
+}
+
+/* ===== HEADER ===== */
 .nav-right{
 	margin-top: 25px;
+
 }
 .a-logo{
 	color: red
@@ -13,6 +22,8 @@
 .p2-logo{
 	color: lightgreen
 }
+/* ===== HEADER END/ BODY START ====== */
+
 .body-content{
 	margin-top: 100px
 }
@@ -20,5 +31,17 @@
 	margin-bottom: 50px
 }
 .start-location, .end-location{
-	height: 46px
+	height: 46px;
+	box-shadow: -30px 28px 25px -27px rgba(0,0,0,0.75);
+	filter: opacity(.8)
 }
+.start-location{
+	
+}
+
+
+
+
+
+
+/* ==== BODY END ===== */
