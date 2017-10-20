@@ -74,17 +74,17 @@ h3{
 	height: 63px;
 	background-color: white 
 }
-.about-boxes{
+/* .about-boxes{
 	height: 80%;
 	margin-top: 160px;
 	
-}
+} */
 .about-block1, .about-block2, .about-block3{
 
-	background:	rgba(255,255,224,0.5);
+	/* background:	rgba(255,255,224,0.5); */
 	padding: 50px 
 }
-.about-block1{
+/* .about-block1{
 	margin-left: 90px;
 }
 .about-block2{
@@ -92,11 +92,19 @@ h3{
 }
 .about-block3{
 	margin-left: 100px;
+} */
+/* .about-boxes img{
+	width: 100%;
+} */
+.about-boxes{
+	margin-left: 230px;
+	height: 80%;
+	margin-top: 160px;
 }
-.about-boxes img{
-	/* height: 200px; */
+.page-two-image{
 	width: 100%;
 }
+
 /* ==== BODY END ===== */
 
 
