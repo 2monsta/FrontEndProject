@@ -104,7 +104,7 @@ function mapfunction(){
 		}
 		calculateAndDisplayRoute();
 
-
+		// JASON
 		$(".search-for-your-food").submit((e)=>{
 			e.preventDefault();
 			infoWindow = new google.maps.InfoWindow;
@@ -119,31 +119,36 @@ function mapfunction(){
 				};
 				currentLocationLat = pos.lat;
 				currentLocationLng = pos.lng;
-				// infoWindow.setPosition(pos);
-				// infoWindow.setContent('You are here!');
-				// infoWindow.open(map);
-				// map.setCenter(pos);
-
 				var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
 				$.getJSON(url, function(foodData){
-					var cusID = foodData.location.city_id;
-					var inputData = $("#food-search").val();
+					// console.log(foodData);
+					// var cusID = foodData.location.city_id;
+					var inputData = $("#food-search").val().toLowerCase();
 					var foodHTML = ``;
-					foodHTML += `<h3>Here's what you searched for</h3><ul>`
-					
-					foodData.nearby_restaurants.map((rest)=>{
-					
-						var restaurantCuisine = rest.restaurant.cuisines;
-						if(restaurantCuisine.indexOf(inputData) != -1){
-							foodHTML += `<li>${rest.restaurant.name}</li>`
-						}
-					});
-					foodHTML +=`</ul>`
-					map.setZoom(12);
-					infoWindow.setPosition(pos);
-					infoWindow.setContent(foodHTML);
-					infoWindow.open(map);
-					map.setCenter(pos);
+
+					if(inputData == ``){
+						foodHTML = "You didn't search!"
+						map.setZoom(12);
+						infoWindow.setPosition(pos);
+						infoWindow.setContent(foodHTML);
+						infoWindow.open(map);
+						map.setCenter(pos);
+					}else{
+						foodHTML += `<h3>Here's what you searched for</h3><ul>`
+						foodData.nearby_restaurants.map((rest)=>{
+							var restaurantCuisine = rest.restaurant.cuisines.toLowerCase();
+							if(restaurantCuisine.indexOf(inputData) != -1){
+								foodHTML += `<li>${rest.restaurant.name}</li>`
+							}
+						});
+						foodHTML +=`</ul>`
+						map.setZoom(12);
+						infoWindow.setPosition(pos);
+						infoWindow.setContent(foodHTML);
+						infoWindow.open(map);
+						map.setCenter(pos);
+					}
+				
 				});
 
 				},function() {
