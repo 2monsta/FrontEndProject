@@ -12,3 +12,4 @@
 ### Things to Improve
 - remove the setimeOut function when using geocoder
 - better scoping order
+- improve on responsiveness of page
