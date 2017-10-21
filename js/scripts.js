@@ -63,6 +63,11 @@ function mapfunction(){
 		localStorage.setItem("addressStart", infoAsStringStart);
 		localStorage.setItem("addressEnd", infoAsStringEnd);
 	});
+
+	$("#add-button").click(()=>{
+		
+	})
+
 	initAutocomplete();
 	initAutocompleteEnd();
 }
