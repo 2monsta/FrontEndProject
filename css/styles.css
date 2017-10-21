@@ -21,6 +21,9 @@ h2{
 	font-size: 4em;
 	font-family: 'Fascinate Inline', cursive;
 }
+.navapp-navbar{
+	background: rgba(41, 40, 39, 0.5)
+}
 .nav-right{
 	margin-top: 25px;
 	font-weight: bold
@@ -61,7 +64,9 @@ h2{
 	backdrop-filter: blur(10px)
 }
 .trip-container{
-	background-color:red
+	background: url('../images/yosemite.jpeg') fixed;
+	background-size: cover;
+
 }
 /* About Section */
 h3{
@@ -106,6 +111,13 @@ h3{
 
 /* ==== BODY END ===== */
 
+footer{
+	background:green;
+	height: 50px;
+}
+footer >a{
+	margin-left: 45%
+}
 
 * { box-sizing: border-box; }
 .video-background {
@@ -114,7 +126,7 @@ h3{
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: -99;
   /* opacity: .5; */
-  filter: blur(4px);
+  /* filter: blur(4px); */
   /* filter: sepia(50%) */
 }
 .video-foreground,
