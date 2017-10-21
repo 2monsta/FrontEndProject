@@ -50,6 +50,19 @@ function mapfunction(){
 			lat:latA,
 			lng:latB
 		}
+
+		var latFromGoogle = lat
+		var lngFromGoogle = lng
+		var wheatherURL = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogle}&lon={lngFromGoogle}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
+							
+		$.getJSON(wheatherUrl, function(wheatherInfo){
+			var temp = {
+				current: wheatherInfo.main.temp,
+				max: wheatherInfo.main.temp_max,
+				min: wheatherInfo.main.temp_min,
+			}
+		})
+
 		map.setCenter(center);
 		function calcRoute() {
 			var start = new google.maps.LatLng(lat[0], lng[0]);
