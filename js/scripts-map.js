@@ -55,24 +55,36 @@ function mapfunction(){
 		var lngFromGoogleStart = lng[0];
 		var latFromGoogleEnd = lat[1];
 		var lngFromGoogleEnd = lng[1];
-		var wheatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
-		var wheatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
+		console.log(latFromGoogleStart);
+		console.log(lngFromGoogleStart);
+		console.log(latFromGoogleEnd);
+		console.log(lngFromGoogleEnd);
+
+		var wheatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var wheatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
 							
 		$.getJSON(wheatherUrlStart, function(wheatherInfo){
+			console.log(wheatherInfo);
 			var temp = {
 				current: wheatherInfo.main.temp,
 				max: wheatherInfo.main.temp_max,
 				min: wheatherInfo.main.temp_min,
 			}
+			$(".current-temp-start").text(temp.current);
+			$(".max-temp-start").text(temp.max);
+			$(".min-temp-start").text(temp.min);
 		})
 
-
 		$.getJSON(wheatherUrlEnd, function(wheatherInfo){
+			console.log(wheatherInfo);
 			var temp = {
 				current: wheatherInfo.main.temp,
 				max: wheatherInfo.main.temp_max,
 				min: wheatherInfo.main.temp_min,
 			}
+			$(".current-temp-end").text(temp.current);
+			$(".max-temp-end").text(temp.max);
+			$(".min-temp-end").text(temp.min);
 		})
 
 		map.setCenter(center);
