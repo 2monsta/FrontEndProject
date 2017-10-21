@@ -103,10 +103,53 @@ function mapfunction(){
 			});
 		}
 		calculateAndDisplayRoute();
+
+
+		$(".search-for-your-food").submit((e)=>{
+			e.preventDefault();
+			infoWindow = new google.maps.InfoWindow;
+			var currentLocationLat;
+			var currentLocationLng;
+					// Try HTML5 geolocation.
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+				var pos = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				};
+				currentLocationLat = pos.lat;
+				currentLocationLng = pos.lng;
+				infoWindow.setPosition(pos);
+				infoWindow.setContent('Location found.');
+				infoWindow.open(map);
+				map.setCenter(pos);
+
+				var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
+				$.getJSON(url, function(foodData){
+					console.log(foodData);
+					// console.log(foodData.location.latitude);
+				});
+
+				},function() {
+					handleLocationError(true, infoWindow, map.getCenter());
+					});
+			} else {
+				// Browser doesn't support Geolocation
+				handleLocationError(false, infoWindow, map.getCenter());
+			}
+			function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+				infoWindow.setPosition(pos);
+				infoWindow.setContent(browserHasGeolocation ?
+									'Error: The Geolocation service failed.' :
+									'Error: Your browser doesn\'t support geolocation.');
+				infoWindow.open(map);
+			}
+		})
 	}, 1000);
 
 
 
 	geocodeAddress(geocoder, map, addressStart);
 	geocodeAddress(geocoder, map, addressEnd);
+
 }
