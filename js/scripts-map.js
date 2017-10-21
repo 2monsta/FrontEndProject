@@ -47,6 +47,53 @@ function mapfunction(){
 			lat:latA,
 			lng:latB
 		}
+
+		var latFromGoogleStart = Math.floor(lat[0] * 100) / 100;
+		var lngFromGoogleStart = Math.floor(lng[0] * 100) / 100;
+		var latFromGoogleEnd = Math.floor(lat[1] * 100) / 100;
+		var lngFromGoogleEnd = Math.floor(lng[1] * 100) / 100;
+		console.log(latFromGoogleStart);
+		console.log(lngFromGoogleStart);
+		console.log(latFromGoogleEnd);
+		console.log(lngFromGoogleEnd);
+
+		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleEnd}&lon=${lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		console.log(weatherUrlStart);
+		console.log(weatherUrlEnd);
+
+		$.getJSON(weatherUrlStart, function(weatherInfo){
+			console.log(weatherInfo);
+			console.log(weatherUrlStart);
+			var temp = {
+				current: weatherInfo.main.temp,
+				max: weatherInfo.main.temp_max,
+				min: weatherInfo.main.temp_min,
+			}
+			var icon = weatherInfo.weather[0].icon;
+			$(".current-temp-start").text(temp.current);
+			$(".max-temp-start").text(temp.max);
+			$(".min-temp-start").text(temp.min);
+			$('.icon-start').html(`<div class="col-sm-6 icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+		})
+
+		$.getJSON(weatherUrlEnd, function(weatherInfo){
+			console.log(weatherInfo);
+			console.log(weatherUrlEnd);
+			var temp = {
+				current: weatherInfo.main.temp,
+				max: weatherInfo.main.temp_max,
+				min: weatherInfo.main.temp_min,
+			}
+			var icon = weatherInfo.weather[0].icon;
+			$(".current-temp-end").text(temp.current);
+			$(".max-temp-end").text(temp.max);
+			$(".min-temp-end").text(temp.min);
+			$('.icon-end').html(`<div class="col-sm-6 icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+		})
+
+
+
 		map.setCenter(center);
 		function calcRoute() {
 			var start = new google.maps.LatLng(lat[0], lng[0]);
