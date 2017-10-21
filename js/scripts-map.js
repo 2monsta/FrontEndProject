@@ -15,9 +15,6 @@ function mapfunction(){
 		center: myLatLng
 	});
 
-
-
-
 	var onChangeHandler = function() {
 		calculateAndDisplayRoute(directionsService, directionsDisplay);
 	};
@@ -146,6 +143,8 @@ function mapfunction(){
 						infoWindow.setContent(foodHTML);
 						infoWindow.open(map);
 						map.setCenter(pos);
+						// infoWindow.content_changed;
+						infoWindow.close();
 					}			
 				});
 
