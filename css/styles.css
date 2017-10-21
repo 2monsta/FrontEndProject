@@ -106,6 +106,9 @@ h3{
   /* position: fixed; */
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: -99;
+  /* opacity: .5; */
+  filter: blur(4px);
+  /* filter: sepia(50%) */
 }
 .video-foreground,
 .video-background video {
