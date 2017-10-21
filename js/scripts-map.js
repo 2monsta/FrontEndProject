@@ -60,8 +60,10 @@ function mapfunction(){
 		console.log(latFromGoogleEnd);
 		console.log(lngFromGoogleEnd);
 
-		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
-		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleEnd}&lon=${lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		console.log(weatherUrlStart);
+		console.log(weatherUrlEnd);
 
 		$.getJSON(weatherUrlStart, function(weatherInfo){
 			console.log(weatherInfo);
@@ -71,11 +73,11 @@ function mapfunction(){
 				max: weatherInfo.main.temp_max,
 				min: weatherInfo.main.temp_min,
 			}
-			var icon = wheatherInfo.weather[0].icon;
+			var icon = weatherInfo.weather[0].icon;
 			$(".current-temp-start").text(temp.current);
 			$(".max-temp-start").text(temp.max);
 			$(".min-temp-start").text(temp.min);
-			$('.icon-start').html(`<div class="icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+			$('.icon-start').html(`<div class="col-sm-6 icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
 
 		$.getJSON(weatherUrlEnd, function(weatherInfo){
@@ -86,11 +88,11 @@ function mapfunction(){
 				max: weatherInfo.main.temp_max,
 				min: weatherInfo.main.temp_min,
 			}
-			var icon = wheatherInfo.weather[0].icon;
+			var icon = weatherInfo.weather[0].icon;
 			$(".current-temp-end").text(temp.current);
 			$(".max-temp-end").text(temp.max);
 			$(".min-temp-end").text(temp.min);
-			$('.icon-end').html(`<div class="icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+			$('.icon-end').html(`<div class="col-sm-6 icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
 
 
