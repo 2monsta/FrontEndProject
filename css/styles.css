@@ -9,10 +9,10 @@
 .container-fluid{
 	height: 100vh;	
 }
-/* .front-page-content{
-	position: absolute;
-	bottom: -300;
-} */
+.front-page-content{
+	background-position: fixed
+	
+}
 h2{
 	font-family: 'Baloo Chettan', cursive;
 }
@@ -28,7 +28,7 @@ h2{
 .nav-logo{
 	color: rgb(40, 40, 158);
 	font-family: 'Fascinate Inline', cursive;
-	text-shadow: 5px 5px 3px rgba(118, 132, 150, 1);
+	/* text-shadow: 5px 5px 3px rgba(118, 132, 150, 1); */
 }
 .a-logo{
 	color: red
@@ -54,20 +54,18 @@ h2{
 	box-shadow: -30px 28px 25px -27px rgba(0,0,0,0.75);
 	filter: opacity(.8)
 }
-.start-location{
-}
 .about-container{
-	background-color:orange;
-	background-image: url('../images/trip1.jpeg');
-	background-size: cover
-
+	/* background-color:orange; */
+	background: url('http://www.theplunge.com/images/new_articles/road_trip/roadtrip.jpg') fixed;
+	background-size: cover;
+	backdrop-filter: blur(10px)
 }
 .trip-container{
-	background-color:lightgray
+	background-color:red
 }
 /* About Section */
 h3{
-	color: white;
+	/* color: white; */
 	font-weight: bold
 }
 #about, #popular-trip{
@@ -82,7 +80,8 @@ h3{
 .about-block1, .about-block2, .about-block3{
 
 	background:	rgba(255,255,224,0.5);
-	padding: 50px 
+	padding: 50px;
+	border-radius: 15%
 }
 .about-block1{
 	margin-left: 90px;
@@ -97,6 +96,7 @@ h3{
 	/* height: 200px; */
 	width: 100%;
 }
+
 /* ==== BODY END ===== */
 
 
