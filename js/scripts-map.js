@@ -125,7 +125,6 @@ function mapfunction(){
 					// var cusID = foodData.location.city_id;
 					var inputData = $("#food-search").val().toLowerCase();
 					var foodHTML = ``;
-
 					if(inputData == ``){
 						foodHTML = "You didn't search!"
 						map.setZoom(12);
@@ -138,7 +137,7 @@ function mapfunction(){
 						foodData.nearby_restaurants.map((rest)=>{
 							var restaurantCuisine = rest.restaurant.cuisines.toLowerCase();
 							if(restaurantCuisine.indexOf(inputData) != -1){
-								foodHTML += `<li>${rest.restaurant.name}</li>`
+								foodHTML += `<a href="${rest.restaurant.url}"><li>${rest.restaurant.name}</li></a>`
 							}
 						});
 						foodHTML +=`</ul>`
@@ -147,8 +146,7 @@ function mapfunction(){
 						infoWindow.setContent(foodHTML);
 						infoWindow.open(map);
 						map.setCenter(pos);
-					}
-				
+					}			
 				});
 
 				},function() {
