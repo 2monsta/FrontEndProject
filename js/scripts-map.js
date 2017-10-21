@@ -51,11 +51,23 @@ function mapfunction(){
 			lng:latB
 		}
 
-		var latFromGoogle = lat
-		var lngFromGoogle = lng
-		var wheatherURL = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogle}&lon={lngFromGoogle}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
+		var latFromGoogleStart = lat[0];
+		var lngFromGoogleStart = lng[0];
+		var latFromGoogleEnd = lat[1];
+		var lngFromGoogleEnd = lng[1];
+		var wheatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
+		var wheatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=e8e54db34d0507b93196869e892e7ae6`;
 							
-		$.getJSON(wheatherUrl, function(wheatherInfo){
+		$.getJSON(wheatherUrlStart, function(wheatherInfo){
+			var temp = {
+				current: wheatherInfo.main.temp,
+				max: wheatherInfo.main.temp_max,
+				min: wheatherInfo.main.temp_min,
+			}
+		})
+
+
+		$.getJSON(wheatherUrlEnd, function(wheatherInfo){
 			var temp = {
 				current: wheatherInfo.main.temp,
 				max: wheatherInfo.main.temp_max,
