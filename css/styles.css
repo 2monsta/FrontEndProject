@@ -127,7 +127,6 @@ footer >a{
   z-index: -99;
   /* opacity: .5; */
   /* filter: blur(4px); */
-  /* filter: sepia(50%) */
 }
 .video-foreground,
 .video-background video {
@@ -138,6 +137,7 @@ footer >a{
   height: 100%;
   pointer-events: none;
   overflow: hidden;
+  border-radius: 0 0 50% 50%
 }
 #vidtop-content {
 	top: 0;
