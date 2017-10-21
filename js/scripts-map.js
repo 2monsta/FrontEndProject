@@ -60,34 +60,40 @@ function mapfunction(){
 		console.log(latFromGoogleEnd);
 		console.log(lngFromGoogleEnd);
 
-		var wheatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
-		var wheatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleStart}&lon={lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat={latFromGoogleEnd}&lon={lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
 
-		$.getJSON(wheatherUrlStart, function(wheatherInfo){
-			console.log(wheatherInfo);
-			console.log(wheatherUrlStart);
+		$.getJSON(weatherUrlStart, function(weatherInfo){
+			console.log(weatherInfo);
+			console.log(weatherUrlStart);
 			var temp = {
-				current: wheatherInfo.main.temp,
-				max: wheatherInfo.main.temp_max,
-				min: wheatherInfo.main.temp_min,
+				current: weatherInfo.main.temp,
+				max: weatherInfo.main.temp_max,
+				min: weatherInfo.main.temp_min,
 			}
+			var icon = wheatherInfo.weather[0].icon;
 			$(".current-temp-start").text(temp.current);
 			$(".max-temp-start").text(temp.max);
 			$(".min-temp-start").text(temp.min);
+			$('.icon-start').html(`<div class="icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
 
-		$.getJSON(wheatherUrlEnd, function(wheatherInfo){
-			console.log(wheatherInfo);
-			console.log(wheatherUrlEnd);
+		$.getJSON(weatherUrlEnd, function(weatherInfo){
+			console.log(weatherInfo);
+			console.log(weatherUrlEnd);
 			var temp = {
-				current: wheatherInfo.main.temp,
-				max: wheatherInfo.main.temp_max,
-				min: wheatherInfo.main.temp_min,
+				current: weatherInfo.main.temp,
+				max: weatherInfo.main.temp_max,
+				min: weatherInfo.main.temp_min,
 			}
+			var icon = wheatherInfo.weather[0].icon;
 			$(".current-temp-end").text(temp.current);
 			$(".max-temp-end").text(temp.max);
 			$(".min-temp-end").text(temp.min);
+			$('.icon-end').html(`<div class="icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
+
+
 
 		map.setCenter(center);
 		function calcRoute() {
