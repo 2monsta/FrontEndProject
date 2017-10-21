@@ -119,15 +119,27 @@ function mapfunction(){
 				};
 				currentLocationLat = pos.lat;
 				currentLocationLng = pos.lng;
-				infoWindow.setPosition(pos);
-				infoWindow.setContent('Location found.');
-				infoWindow.open(map);
-				map.setCenter(pos);
+				// infoWindow.setPosition(pos);
+				// infoWindow.setContent('You are here!');
+				// infoWindow.open(map);
+				// map.setCenter(pos);
 
 				var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
 				$.getJSON(url, function(foodData){
 					console.log(foodData);
 					// console.log(foodData.location.latitude);
+					map.setZoom(12);
+					infoWindow.setPosition(pos);
+					infoWindow.setContent(`
+						<h3>You are here! Here's a list of cuisines around you.</h3>
+						<ul>
+							<li><h5>${foodData.nearby_restaurants[0].restaurant.cuisines}</h5></li>
+							<li><h5>${foodData.nearby_restaurants[1].restaurant.cuisines}</h5></li>
+							<li><h5>${foodData.nearby_restaurants[2].restaurant.cuisines}</h5></li>
+							<li><h5>${foodData.nearby_restaurants[3].restaurant.cuisines}</h5></li>
+					`)	
+					infoWindow.open(map);
+					map.setCenter(pos);
 				});
 
 				},function() {
