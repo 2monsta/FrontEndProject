@@ -38,19 +38,19 @@
 .weather-box{
 	position: absolute;
 	margin-left: 101%;
-	margin-top: 10%;
+	margin-top: 15%;
 	z-index: 5;
 	background: rgba(92, 89, 89,0.5);
 	color: black;
 	border-radius: 3%;
-	font-size: auto;
-	/* max-height:  */
-	overflow: auto
+	font-size: 11px;
+	/* max-height: 150px; */
+	overflow: auto;
 }
 .weather-start, .weather-end{
 	background: rgba(236, 234, 234,0.9);
 	margin-bottom: 5%;
-	padding: 5%;
 	max-height: 100%;
 }
+
 
