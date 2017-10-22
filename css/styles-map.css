@@ -6,8 +6,18 @@
 }
 #map{
 	height: 100vh;
+	position: relative
 }
 #info-box{
 	overflow: scroll;
 	height: 600px
+}
+.nav-right, .nav-left{
+	display: hidden
+}
+.weather-box{
+	position: absolute;
+	margin-left: 50%;
+	z-index: 5;
+	background: rgba(92, 89, 89,0.5)
 }
