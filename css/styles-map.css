@@ -17,7 +17,8 @@
 }
 .weather-box{
 	position: absolute;
-	margin-left: 50%;
+	margin-left: 101%;
+	margin-top: 10%;
 	z-index: 5;
 	background: rgba(92, 89, 89,0.5)
 }
