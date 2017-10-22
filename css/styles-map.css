@@ -40,8 +40,8 @@
 	margin-left: 101%;
 	margin-top: 15%;
 	z-index: 5;
-	background: rgba(92, 89, 89,0.5);
-	color: black;
+	background: rgba(21, 39, 119, 0.377);
+	color: white;
 	border-radius: 3%;
 	font-size: 11px;
 	/* max-height: 150px; */
@@ -51,6 +51,11 @@
 	background: rgba(236, 234, 234,0.9);
 	margin-bottom: 5%;
 	max-height: 100%;
+	color: black;
+	border-radius: 3%;
 }
-
+.icon-start, .icon-end{
+	position: absolute;
+	margin-left: 25%
+}
 
