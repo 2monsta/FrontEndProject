@@ -8,12 +8,11 @@
 	height: 90vh;
 	position: relative
 }
-.left-side-bar{
+#info-box{
 	/* overflow: scroll; */
 	height: auto;
-	max-height: 90vh;
-	overflow: auto;
-	
+	max-height: 80vh;
+	overflow: auto;	
 }
 
 .nav-right, .nav-left{
@@ -45,7 +44,7 @@
 	color: black;
 	border-radius: 3%;
 	font-size: auto;
-	max-height: 100px;
+	/* max-height:  */
 	overflow: auto
 }
 .weather-start, .weather-end{
