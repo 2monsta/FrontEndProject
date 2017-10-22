@@ -152,48 +152,50 @@ function mapfunction(){
 		$(".search-for-your-food").submit((e)=>{
 			e.preventDefault();
 			infoWindow = new google.maps.InfoWindow;
+			$(".food-search-button").click(()=>{
+				infoWindow.close();
+			})	
 			var currentLocationLat;
 			var currentLocationLng;
 					// Try HTML5 geolocation.
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
-				var pos = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude
-				};
-				currentLocationLat = pos.lat;
-				currentLocationLng = pos.lng;
-				var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
-				$.getJSON(url, function(foodData){
-					// console.log(foodData);
-					// var cusID = foodData.location.city_id;
-					var inputData = $("#food-search").val().toLowerCase();
-					var foodHTML = ``;
-					if(inputData == ``){
-						foodHTML = "You didn't search!"
-						map.setZoom(12);
-						infoWindow.setPosition(pos);
-						infoWindow.setContent(foodHTML);
-						infoWindow.open(map);
-						map.setCenter(pos);
-					}else{
-						foodHTML += `<h3>Here's what you searched for</h3><ul>`
-						foodData.nearby_restaurants.map((rest)=>{
-							var restaurantCuisine = rest.restaurant.cuisines.toLowerCase();
-							if(restaurantCuisine.indexOf(inputData) != -1){
-								foodHTML += `<a href="${rest.restaurant.url}"><li>${rest.restaurant.name}</li></a>`
-							}
-						});
-						foodHTML +=`</ul>`
-						map.setZoom(12);
-						infoWindow.setPosition(pos);
-						infoWindow.setContent(foodHTML);
-						infoWindow.open(map);
-						map.setCenter(pos);
-						// infoWindow.content_changed;
-						infoWindow.close();
-					}			
-				});
+					var pos = {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude
+					};
+					currentLocationLat = pos.lat;
+					currentLocationLng = pos.lng;
+					var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
+					$.getJSON(url, function(foodData){
+						// console.log(foodData);
+						// var cusID = foodData.location.city_id;
+						var inputData = $("#food-search").val().toLowerCase();
+						$("#food-search").val("");
+						var foodHTML = ``;
+						if(inputData == ``){
+							foodHTML = "You didn't search!"
+							map.setZoom(12);
+							infoWindow.setPosition(pos);
+							infoWindow.setContent(foodHTML);
+							infoWindow.open(map);
+							map.setCenter(pos);
+						}else{
+							foodHTML += `<h3>Here's what you searched for</h3><ul>`
+							foodData.nearby_restaurants.map((rest)=>{
+								var restaurantCuisine = rest.restaurant.cuisines.toLowerCase();
+								if(restaurantCuisine.indexOf(inputData) != -1){
+									foodHTML += `<a href="${rest.restaurant.url}"><li>${rest.restaurant.name}</li></a>`
+								}
+							});
+							foodHTML +=`</ul>`
+							map.setZoom(12);
+							infoWindow.setPosition(pos);
+							infoWindow.setContent(foodHTML);
+							infoWindow.open(map);
+							map.setCenter(pos);
+						}
+					});
 
 				},function() {
 					handleLocationError(true, infoWindow, map.getCenter());
