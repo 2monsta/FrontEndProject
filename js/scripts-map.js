@@ -219,4 +219,7 @@ function mapfunction(){
 	geocodeAddress(geocoder, map, addressStart);
 	geocodeAddress(geocoder, map, addressEnd);
 
+	$("#log-in").click(()=>{
+		$('#myModal').modal('show');
+	});
 }

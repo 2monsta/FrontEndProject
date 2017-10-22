@@ -15,8 +15,26 @@
 	overflow: auto;
 	
 }
+
 .nav-right, .nav-left{
 	display: hidden
+}
+.nav-right{
+	margin-top: 25px;
+}
+.nav-logo{
+	color: rgb(40, 40, 158);
+	font-family: 'Fascinate Inline', cursive;
+	/* text-shadow: 5px 5px 3px rgba(118, 132, 150, 1); */
+}
+.a-logo{
+	color: red
+}
+.p-logo{
+	color: rgb(245, 245, 45)
+}
+.p2-logo{
+	color: lightgreen
 }
 .weather-box{
 	position: absolute;
@@ -30,10 +48,10 @@
 	max-height: 100px;
 	overflow: auto
 }
-/* .weather-start, .weather-end{
+.weather-start, .weather-end{
 	background: rgba(236, 234, 234,0.9);
 	margin-bottom: 5%;
 	padding: 5%;
 	max-height: 100%;
-} */
+}
 
