@@ -20,10 +20,13 @@ function mapfunction(){
 	}
 
 
-
+	
 	$("#log-in").click(()=>{
-		$('#myModal').modal('show');
+		$('#myModal').modal("show");
 	});
+	// $("#myModal").on("show",function(){
+	// 	$("#myModalSignUp").modal("show");
+	// })
 	$("#sign-up").click(()=>{
 		$('#myModalSignUp').modal('show');
 	})
