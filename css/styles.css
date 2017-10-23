@@ -116,6 +116,10 @@ h3{
 	overflow: hidden;
 	box-shadow: 1px -3px 16px -2px rgba(0,0,0,0.75);
 }
+.item >img{
+	margin: auto
+}
+	
 
 
 /* ==== BODY END ===== */
