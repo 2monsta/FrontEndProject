@@ -16,7 +16,8 @@ NavAPP is a extraordinary roadtrip planner that will help you map out your next 
 - Google Maps API 
 - Open Weather Maps API 
 - Zomato API 
-- Bootstrap, jQuery 
+- Bootstrap, jQuery
+- JavaScript
 ### What We Learned 
 From this project, we learned how to utilized git branches to resolve merge conflicts. Most importantly, we learned how to work as a team. We learned how to work with different APIs such as google maps API and open weather API and how to utilize data from multiple sources. 
 #### Challenges and Solutions
