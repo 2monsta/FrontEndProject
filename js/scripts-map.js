@@ -59,6 +59,9 @@ function mapfunction(){
 
 		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
 		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleEnd}&lon=${lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+
+		var forecastStart = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var forecastEnd = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
 		console.log(weatherUrlStart);
 		console.log(weatherUrlEnd);
 
@@ -90,6 +93,54 @@ function mapfunction(){
 			$(".max-temp-end").text(temp.max);
 			$(".min-temp-end").text(temp.min);
 			$('.icon-end').html(`<div class="col-sm-6 icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+		})
+
+		$.getJSON(forecastStart, function(forecastInfo){
+			console.log(forecastInfo);
+			var forecastMax = {
+				day1: forecastInfo.list[8].main.temp_max,
+				dat2: forecastInfo.list[16].main.temp_max,
+				day3: forecastInfo.list[24].main.temp_max,
+				day4: forecastInfo.list[32].main.temp_max,
+				day5: forecastInfo.list[39].main.temp_max,
+			}
+			console.log(forecastMax.day1);
+			console.log(forecastMax.day2);
+			console.log(forecastMax.day3);
+			console.log(forecastMax.day4);
+			console.log(forecastMax.day5);
+
+			var forecastMin = {
+				day1: forecastInfo.list[8].main.temp_min,
+				dat2: forecastInfo.list[16].main.temp_min,
+				day3: forecastInfo.list[24].main.temp_min,
+				day4: forecastInfo.list[32].main.temp_min,
+				day5: forecastInfo.list[39].main.temp_min,
+			}
+		})
+
+		$.getJSON(forecastEnd, function(forecastInfo){
+			console.log(forecastInfo);
+			var forecastMax = {
+				day1: forecastInfo.list[8].main.temp_max,
+				dat2: forecastInfo.list[16].main.temp_max,
+				day3: forecastInfo.list[24].main.temp_max,
+				day4: forecastInfo.list[32].main.temp_max,
+				day5: forecastInfo.list[39].main.temp_max,
+			}
+			console.log(forecastMax.day1);
+			console.log(forecastMax.day2);
+			console.log(forecastMax.day3);
+			console.log(forecastMax.day4);
+			console.log(forecastMax.day5);
+
+			var forecastMin = {
+				day1: forecastInfo.list[8].main.temp_min,
+				dat2: forecastInfo.list[16].main.temp_min,
+				day3: forecastInfo.list[24].main.temp_min,
+				day4: forecastInfo.list[32].main.temp_min,
+				day5: forecastInfo.list[39].main.temp_min,
+			}
 		})
 
 
