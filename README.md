@@ -6,8 +6,8 @@ NavAPP is a extraordinary roadtrip planner that will help you map out your next 
 - Binh Chung
 	<p></p>
 - Jong Park
-	<p></p>
-- [Jason Li] (https://github.com/2monsta)
+	<p></p><p>- help out with initial layout</p>
+- [Jason Li](https://github.com/2monsta)
 	<p>- My main contribution is that I used zomato's API to extract data back for the search button on map page as well as basic styles to our page.</p>
 
 ### Initial Wire Frame
