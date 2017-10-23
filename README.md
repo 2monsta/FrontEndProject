@@ -1,4 +1,4 @@
-## FrontEndProject
+# FrontEndProject
 NavAPP is a extraordinary roadtrip planner that will help you map out your next destination, look up realtime weather information, and find places to eat nearby. 
 ## Meet the Team!
 - As a Team
