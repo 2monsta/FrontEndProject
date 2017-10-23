@@ -14,7 +14,12 @@
 	max-height: 80vh;
 	overflow: auto;	
 }
-
+.nav{
+	margin-bottom: -20px;
+}
+.navapp-navbar{
+	background: rgba(41, 40, 39, 0.5)
+}
 .nav-right, .nav-left{
 	display: hidden
 }
