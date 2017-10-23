@@ -1,5 +1,7 @@
 ## FrontEndProject
-### Struggles
+NavAPP is a simple roadtrip planner that will help you map out your trip.
+![Front Page](images/frontpage.png)
+#### Struggles
 - Have a hard time moving data from page one to two
 - Centering the map after getting two locations
 - Getting the zoom to be correct according to distance
@@ -9,7 +11,7 @@
 - our data is based on Zomato's API and it doesn't include all.
 
 
-### Things to Improve
+#### Things to Improve
 - remove the setimeOut function when using geocoder
 - better scoping order
 - improve on responsiveness of page
