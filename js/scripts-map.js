@@ -150,6 +150,7 @@ function mapfunction(){
 
 		// JASON
 		$(".search-for-your-food").submit((e)=>{
+			$(".loading-image").addClass("loader");
 			e.preventDefault();
 			infoWindow = new google.maps.InfoWindow;
 			$(".food-search-button").click(()=>{
@@ -177,6 +178,7 @@ function mapfunction(){
 							foodHTML = "You didn't search!"
 							map.setZoom(12);
 							infoWindow.setPosition(pos);
+							$(".loading-image").removeClass("loader");
 							infoWindow.setContent(foodHTML);
 							infoWindow.open(map);
 							map.setCenter(pos);
@@ -191,6 +193,7 @@ function mapfunction(){
 							foodHTML +=`</ul>`
 							map.setZoom(12);
 							infoWindow.setPosition(pos);
+							$(".loading-image").removeClass("loader");
 							infoWindow.setContent(foodHTML);
 							infoWindow.open(map);
 							map.setCenter(pos);
@@ -199,8 +202,8 @@ function mapfunction(){
 
 				},function() {
 					handleLocationError(true, infoWindow, map.getCenter());
-					});
-			} else {
+				});
+			}else{
 				// Browser doesn't support Geolocation
 				handleLocationError(false, infoWindow, map.getCenter());
 			}
