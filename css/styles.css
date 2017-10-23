@@ -119,8 +119,10 @@ h3{
 .item >img{
 	margin: auto
 }
-	
-
+p{
+	text-align: left;
+	margin: 5%
+}
 
 /* ==== BODY END ===== */
 
