@@ -74,9 +74,11 @@ function mapfunction(){
 				min: weatherInfo.main.temp_min,
 			}
 			var icon = weatherInfo.weather[0].icon;
+			var nameToChange = weatherInfo.name;
 			$(".current-temp-start").text(temp.current);
 			$(".max-temp-start").text(temp.max);
 			$(".min-temp-start").text(temp.min);
+			$(".start-name-change").text(nameToChange);
 			$('.icon-start').html(`<div class="col-sm-6 icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
 
@@ -89,9 +91,11 @@ function mapfunction(){
 				min: weatherInfo.main.temp_min,
 			}
 			var icon = weatherInfo.weather[0].icon;
+			var nameToChange = weatherInfo.name;
 			$(".current-temp-end").text(temp.current);
 			$(".max-temp-end").text(temp.max);
 			$(".min-temp-end").text(temp.min);
+			$(".end-name-change").text(nameToChange)
 			$('.icon-end').html(`<div class="col-sm-6 icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
 		})
 
