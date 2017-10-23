@@ -26,7 +26,31 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					<h4 class="modal-title" id="myModalLabelLogIn">Log In</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<input type="email" class="form-control name-input" placeholder="email or ID">
+							<br> <!-- change to css later -->  
+						<input type="password" class="form-control password-input" placeholder="password">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- SIGNUP MODAL -->
+	<div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabelSignUp">Modal title</h4>
 				</div>
 				<div class="modal-body">
 					<form>
@@ -74,7 +98,7 @@
 				<div class="col-sm-offset-3 col-sm-5 nav-right">
 					<div class="row text-center">
 							<!-- About Section -->
-						<div class="col-sm-2">
+						<div class="col-sm-2 col-xs-6">
 							<a href="#about">ABOUT</a>
 							</div>
 							<!-- About Section End -->
@@ -85,7 +109,7 @@
 							<a href="#" id="log-in">LOG IN</a>
 						</div>
 						<div class="col-sm-3 col-xs-6">
-							<a href="">SIGN UP</a>
+							<a href="" id="sign-up">SIGN UP</a>
 						</div>
 					</div>
 				</div>
@@ -160,7 +184,7 @@
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<div class="panel panel-default">
 							  <div class="panel-heading" role="tab" id="headingOne">
-								<h4 class="panel-title">
+								<h4 class="panel-title text-center">
 								  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 									Ultimate Roadtrip 
 								  </a>
@@ -214,7 +238,7 @@
 							</div>
 							<div class="panel panel-default">
 							  <div class="panel-heading" role="tab" id="headingTwo">
-								<h4 class="panel-title">
+								<h4 class="panel-title text-center">
 								  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 									Pacific Coast(Big Sur)
 								  </a>
@@ -264,7 +288,7 @@
 							</div>
 							<div class="panel panel-default">
 							  <div class="panel-heading" role="tab" id="headingThree">
-								<h4 class="panel-title">
+								<h4 class="panel-title text-center">
 								  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 									Route 66 (ILLINOIS TO CALIFORNIA)
 								  </a>

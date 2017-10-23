@@ -161,4 +161,7 @@ footer >a{
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
 }
-
+.panel{
+	max-height: 500px;
+	overflow-y: scroll;
+}

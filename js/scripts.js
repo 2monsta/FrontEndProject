@@ -24,6 +24,9 @@ function mapfunction(){
 	$("#log-in").click(()=>{
 		$('#myModal').modal('show');
 	});
+	$("#sign-up").click(()=>{
+		$('#myModalSignUp').modal('show');
+	})
 	// $(".search-form").submit((e)=>{
 	// 	e.preventDefault();
 	// 	var start = $(".start-location").val();
