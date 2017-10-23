@@ -72,14 +72,16 @@ function mapfunction(){
 				current: weatherInfo.main.temp,
 				max: weatherInfo.main.temp_max,
 				min: weatherInfo.main.temp_min,
+				condition: weatherInfo.weather[0].description,
 			}
 			var icon = weatherInfo.weather[0].icon;
 			var nameToChange = weatherInfo.name;
 			$(".current-temp-start").text(temp.current);
 			$(".max-temp-start").text(temp.max);
 			$(".min-temp-start").text(temp.min);
-			$(".start-name-change").text(nameToChange);
-			$('.icon-start').html(`<div class="col-sm-6 icon-start"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+			$(".start-name-change").text(nameToChange.toUpperCase());
+			$(".condition-start").text(temp.condition);
+			$('.icon-start-target').html(`<img src="http://openweathermap.org/img/w/${icon}.png">`);
 		})
 
 		$.getJSON(weatherUrlEnd, function(weatherInfo){
@@ -89,14 +91,16 @@ function mapfunction(){
 				current: weatherInfo.main.temp,
 				max: weatherInfo.main.temp_max,
 				min: weatherInfo.main.temp_min,
+				condition: weatherInfo.weather[0].description,
 			}
 			var icon = weatherInfo.weather[0].icon;
 			var nameToChange = weatherInfo.name;
 			$(".current-temp-end").text(temp.current);
 			$(".max-temp-end").text(temp.max);
 			$(".min-temp-end").text(temp.min);
-			$(".end-name-change").text(nameToChange)
-			$('.icon-end').html(`<div class="col-sm-6 icon-end"><img src="http://openweathermap.org/img/w/${icon}.png"></div>`);
+			$(".end-name-change").text(nameToChange.toUpperCase());
+			$(".condition-end").text(temp.condition);
+			$('.icon-end-target').html(`<img src="http://openweathermap.org/img/w/${icon}.png">`);
 		})
 
 		$.getJSON(forecastStart, function(forecastInfo){
