@@ -44,14 +44,12 @@ function mapfunction(){
 	}
 
 	$("#log-in").click(()=>{
-		$('#myModal').modal("show");
+		$('#myModalLogIn').modal("show");
 	});
-	// $("#myModal").on("show",function(){
-	// 	$("#myModalSignUp").modal("show");
-	// })
 	$("#sign-up").click(()=>{
-		$('#myModalSignUp').modal('show');
-	})
+		$('#myModalLogIn').modal("show");
+	});
+
 	// $(".search-form").submit((e)=>{
 	// 	e.preventDefault();
 	// 	var start = $(".start-location").val();

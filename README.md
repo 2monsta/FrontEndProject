@@ -6,8 +6,10 @@ NavAPP is a extraordinary roadtrip planner that will help you map out your next 
 	<p>- As a team, we all contributed to the idea, layout as well as the functions of the project. We used google map's API to map out the directions and direct route from A to B. We also worked on how to get data from one page to our second page.</p>
 - Binh Chung: Wireframe, HTML, CSS, Google Maps 
 	<p></p>
-- Jong Park
-	<p></p><p>- help out with initial layout</p>
+- [Jong Park](https://github.com/maclay13531)
+	<p>- Main contribution was to extract weather API & forecast API data to show weathers of current and future days on our map page.
+	Styled the front landing part(video and title).
+	</p>
 - [Jason Li](https://github.com/2monsta)
 	<p>- My main contribution is that I used zomato's API to extract data back for the search button on map page as well as basic styles to our page.</p>
 
