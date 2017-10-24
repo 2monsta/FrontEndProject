@@ -228,8 +228,6 @@ function mapfunction(){
 					currentLocationLng = pos.lng;
 					var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
 					$.getJSON(url, function(foodData){
-						// console.log(foodData);
-						// var cusID = foodData.location.city_id;
 						var inputData = $("#food-search").val().toLowerCase();
 						var found = false;
 						$("#food-search").val("");
