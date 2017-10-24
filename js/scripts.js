@@ -9,11 +9,24 @@ function mapfunction(){
 	var tripContainer = $(".trip-container");
 	var frontPage = $('.front-page');
 	$(window).scroll(function () {
-		if($(window).scrollTop() <100) {
+		if($(window).scrollTop() > 0) {
 			// frontPage.addClass("animateMe");
-			aboutContainer.addClass("animateMe")
+			aboutContainer.addClass("animateMe");
+			tripContainer.addClass("animateMe")
 		}
+		if($(window).scrollTop() == 0) {
+			// frontPage.addClass("animateMe");
+			aboutContainer.removeClass("animateMe")
+			tripContainer.removeClass("animateMe")
+		}
+
 	});
+	// $(window).scroll(function () {
+	// 	if($(window).scrollTop() == 0) {
+	// 		// frontPage.addClass("animateMe");
+	// 		aboutContainer.removeClass("animateMe")
+	// 	}
+	// });
 
 	function initAutocomplete() {
 		// Create the autocomplete object, restricting the search to geographical
