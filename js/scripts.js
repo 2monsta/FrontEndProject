@@ -25,7 +25,7 @@ function mapfunction(){
 		$('#myModalLogIn').modal("show");
 	});
 	$("#sign-up").click(()=>{
-		$('#myModalLogIn').modal("show");
+		$('#myModalSignIn').modal("show");
 	});
 
 	// $(".search-form").submit((e)=>{

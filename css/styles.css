@@ -8,10 +8,10 @@
 }
 .container-fluid{
 	height: 100vh;	
+	overflow-x: hidden;
 }
 .front-page-content{
-	background-position: fixed
-	
+	background-position: fixed;
 }
 h2{
 	font-family: 'Baloo Chettan', cursive;
