@@ -40,8 +40,9 @@ From this project, we learned how to utilize git branches to resolve merge confl
 5. Embeded video inside Front Page
 
 ## Improvements/ Additional Features
-- Fix enter button bug on landing page 
-- Remove the setimeOut function when using geocoder
+- Fix enter button on landing page, entering one address
+- Submit Form vs submit link tag
+- Remove the setimeOut function when using geocoder and replace with a callback function
 - Better scoping order in JS File 
 - Responsiveness of page 
 - Switch from local storage to database/server for data storage
