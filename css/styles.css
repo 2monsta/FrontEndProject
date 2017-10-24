@@ -10,7 +10,8 @@
 }
 .container-fluid{
 	height: 100vh;
-	overflow-x: hidden
+	overflow-x: hidden;
+	margin-top: 50px;
 }
 .front-page-content{
 	background-position: fixed;
