@@ -1,14 +1,16 @@
 /* .front-page{
-	background-image: url('../images/roadtrip.jpeg');
-	background-size: cover;
-	
+	animation: flip-page 2s linear 1s forwards;
 } */
+/* .front-page.animateMe{
+	animation: flip-page 2s linear 1s forwards;
+} */
+
 #background{
 	z-index: -1
 }
 .container-fluid{
-	height: 100vh;	
-	overflow-x: hidden;
+	height: 100vh;
+	overflow-x: hidden
 }
 .front-page-content{
 	background-position: fixed;
@@ -16,13 +18,18 @@
 h2{
 	font-family: 'Baloo Chettan', cursive;
 }
-/* ===== HEADER ===== */
+/* ===== NavBar ===== */
 #header-navapp{
 	font-size: 4em;
 	font-family: 'Fascinate Inline', cursive;
 }
 .navapp-navbar{
-	background: rgba(41, 40, 39, 0.5)
+	background: rgb(66, 124, 248);
+	box-shadow: -1px 5px 18px 0px rgba(0,0,0,0.75);
+}
+a{
+	color: white;
+	text-decoration: none
 }
 .nav-right{
 	margin-top: 25px;
@@ -42,10 +49,10 @@ h2{
 .p2-logo{
 	color: lightgreen
 }
-.down-arrow{
+/* .down-arrow{
 	float: bottom
-}
-/* ===== HEADER END/ BODY START ====== */
+} */
+/* ===== Nav Bar END/ BODY START ====== */
 
 .body-content{
 	margin-top: 100px
@@ -60,54 +67,75 @@ h2{
 	box-shadow: -30px 28px 25px -27px rgba(0,0,0,0.75);
 	filter: opacity(.8)
 }
+   /* About Section */
 .about-container{
 	/* background-color:orange; */
-	background: url('http://www.theplunge.com/images/new_articles/road_trip/roadtrip.jpg') fixed;
+	background: url('http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/roadtrip0616_0.jpg?itok=XFlFiCLw') fixed;
 	background-size: cover;
-	backdrop-filter: blur(10px)
+	opacity: 0;
+	/* backdrop-filter: blur(10px) */
+}
+.about-container.animateMe{
+	animation: Fade .5s linear 1s forwards;
+}
+@keyframes Fade {
+	0% {opacity: 0;}
+	/* 25% {opacity: 0.25;} */
+	50% {opacity: 0.5;}
+	/* 75% {opacity: 0.75;} */
+	100% {opacity: 1;}
+}
+@keyframes flip-page{
+	from{
+		transform: translateY(0)
+	}
+	to {
+		transform: translateY(-100%)
+	}
 }
 .trip-container{
-	/* background: url('../images/yosemite.jpeg') fixed; */
-	/* background-size: cover; */
-	background: rgb(90, 168, 101);
+	background: url('https://www.timetravelturtle.com/wp-content/uploads/2016/03/Victoria-2016-478_new.jpg') fixed;
+	/* background: url('../images/rocks.jpeg'); */
+	background-size: cover;
+	filter: blur(5px)
+	/* background: rgb(90, 168, 101); */
+	position: relative;
+	opacity: 0;
 }
-/* About Section */
+.trip-container.animateMe{
+	animation: Fade 4s linear 1s forwards;
+}
 h3{
 	/* color: white; */
 	font-weight: bold
 }
-#about, #popular-trip{
+/* #about, #popular-trip{
 	height: 63px;
 	background-color: white 
-}
-/* .about-boxes{
-	height: 80%;
-	margin-top: 160px;
-	
 } */
+.about-heading{
+	margin-top: 5%;
+	text-decoration: underline;
+	color: white
+}
+.popular-trips-heading{
+	margin-top: 2%;
+	text-decoration: underline;
+	color: white
+}
 .about-block1, .about-block2, .about-block3{
 
 	background:	rgba(255,255,224,0.5);
 	padding: 50px;
 	border-radius: 15%
 }
-/* .about-block1{
-	margin-left: 90px;
-}
-.about-block2{
-	margin-left: 110px;
-}
-.about-block3{
-	margin-left: 100px;
-} */
-/* .about-boxes img{
-	width: 100%;
-} */
+
 .about-boxes{
-	margin-left: 230px;
+	margin-left: 15%;
 	height: 80%;
-	margin-top: 160px;
+	margin-top: 6%;
 }
+ /* Popular Trip Section */
 .page-two-image{
 	width: 100%;
 }
@@ -115,6 +143,8 @@ h3{
 	margin-top: 3%;
 	overflow: hidden;
 	box-shadow: 1px -3px 16px -2px rgba(0,0,0,0.75);
+	height: 80vh;
+	/* position: absolute */
 }
 .item >img{
 	margin: auto
@@ -133,7 +163,15 @@ footer{
 footer >a{
 	margin-left: 45%
 }
+#github-icon{
+	float: right;
+}
+.footer-names{
+	margin-top: 15px;
+}
 
+
+/* ===== Front Page Video ====  */
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -176,10 +214,4 @@ footer >a{
 .panel{
 	max-height: 500px;
 	overflow-y: scroll;
-}
-#github-icon{
-	float: right;
-}
-.footer-names{
-	margin-top: 15px;
 }

@@ -4,6 +4,30 @@ function mapfunction(){
 	var addressEnd = [];
 	var autoComplete;
 
+
+	var aboutContainer = $(".about-container");
+	var tripContainer = $(".trip-container");
+	var frontPage = $('.front-page');
+	$(window).scroll(function () {
+		if($(window).scrollTop() > 0) {
+			// frontPage.addClass("animateMe");
+			aboutContainer.addClass("animateMe");
+			tripContainer.addClass("animateMe")
+		}
+		if($(window).scrollTop() == 0) {
+			// frontPage.addClass("animateMe");
+			aboutContainer.removeClass("animateMe")
+			tripContainer.removeClass("animateMe")
+		}
+
+	});
+	// $(window).scroll(function () {
+	// 	if($(window).scrollTop() == 0) {
+	// 		// frontPage.addClass("animateMe");
+	// 		aboutContainer.removeClass("animateMe")
+	// 	}
+	// });
+
 	function initAutocomplete() {
 		// Create the autocomplete object, restricting the search to geographical
 		// location types.
@@ -19,8 +43,6 @@ function mapfunction(){
 			{types: ['geocode']});
 	}
 
-
-	
 	$("#log-in").click(()=>{
 		$('#myModalLogIn').modal("show");
 	});
