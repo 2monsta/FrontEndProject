@@ -36,7 +36,7 @@ a{
 	font-weight: bold
 }
 @media (max-width: 767px) {
-    .nav-left { text-align:center }
+    .nav-logo-div, .navbar-brand { text-align:center }
 }
 .nav-logo{
 	color: rgb(40, 40, 158);
