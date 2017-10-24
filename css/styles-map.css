@@ -18,13 +18,19 @@
 	margin-bottom: -20px;
 }
 .navapp-navbar{
-	background: rgba(41, 40, 39, 0.5)
+	/*background: rgba(41, 40, 39, 0.5)*/
+	background: rgb(66, 124, 248);
+	box-shadow: -1px 5px 18px 0px rgba(0,0,0,0.75);
 }
 .nav-right, .nav-left{
 	display: hidden
 }
 .nav-right{
 	margin-top: 25px;
+}
+#log-in, #sign-up{
+	color: white;
+	font-weight: bold;
 }
 .nav-logo{
 	color: rgb(40, 40, 158);
