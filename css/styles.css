@@ -93,8 +93,8 @@ a{
 	}
 }
 .trip-container{
-	/* background: url('http://behindtheviewfinder.com/content/images/2016/09/Delicate-Arch-Sunset.jpg') fixed; */
-	background: url('../images/rocks.jpeg');
+	background: url('https://www.timetravelturtle.com/wp-content/uploads/2016/03/Victoria-2016-478_new.jpg') fixed;
+	/* background: url('../images/rocks.jpeg'); */
 	background-size: cover;
 	filter: blur(5px)
 	/* background: rgb(90, 168, 101); */
