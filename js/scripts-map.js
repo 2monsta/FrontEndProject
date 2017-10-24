@@ -57,11 +57,11 @@ function mapfunction(){
 		console.log(latFromGoogleEnd);
 		console.log(lngFromGoogleEnd);
 
-		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
-		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleEnd}&lon=${lngFromGoogleEnd}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var weatherUrlStart = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=${appid}`;
+		var weatherUrlEnd = `https://api.openweathermap.org/data/2.5/weather?lat=${latFromGoogleEnd}&lon=${lngFromGoogleEnd}&units=imperial&appid=${appid}`;
 
-		var forecastStart = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
-		var forecastEnd = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=ee13ecc0df34704b22cb350459ec341b`;
+		var forecastStart = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=${appid}`;
+		var forecastEnd = `https://api.openweathermap.org/data/2.5/forecast?lat=${latFromGoogleStart}&lon=${lngFromGoogleStart}&units=imperial&appid=${appid}`;
 		console.log(weatherUrlStart);
 		console.log(weatherUrlEnd);
 
@@ -226,7 +226,7 @@ function mapfunction(){
 					};
 					currentLocationLat = pos.lat;
 					currentLocationLng = pos.lng;
-					var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=5c177e0bff7c66946fd19276c7ce4de6&lat=${currentLocationLat}&lon=${currentLocationLng}`
+					var url = `https://developers.zomato.com/api/v2.1/geocode?apikey=${apikey}&lat=${currentLocationLat}&lon=${currentLocationLng}`
 					$.getJSON(url, function(foodData){
 						var inputData = $("#food-search").val().toLowerCase();
 						var found = false;
