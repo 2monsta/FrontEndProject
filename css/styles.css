@@ -11,7 +11,6 @@
 .container-fluid{
 	height: 100vh;
 	overflow-x: hidden;
-	margin-top: 50px;
 }
 .front-page-content{
 	background-position: fixed;
@@ -74,6 +73,7 @@ a{
 	background: url('http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/roadtrip0616_0.jpg?itok=XFlFiCLw') fixed;
 	background-size: cover;
 	opacity: 0;
+	margin-top: 70px;
 	/* backdrop-filter: blur(10px) */
 }
 .about-container.animateMe{
@@ -98,7 +98,12 @@ a{
 	background: url('https://www.timetravelturtle.com/wp-content/uploads/2016/03/Victoria-2016-478_new.jpg') fixed;
 	/* background: url('../images/rocks.jpeg'); */
 	background-size: cover;
+<<<<<<< HEAD
 	/* filter: blur(5px); */
+=======
+	/*filter: blur(5px);*/
+	border-top: 25px solid black;
+>>>>>>> a04d5f70242ee1c2193760e93a84bfcbe389fddd
 	/* background: rgb(90, 168, 101); */
 	position: relative;
 	opacity: 0;
@@ -215,4 +220,8 @@ footer >a{
 .panel{
 	max-height: 500px;
 	overflow-y: scroll;
+}
+
+.carousel-inner img{
+	margin-top: 30px;
 }
