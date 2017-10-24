@@ -288,4 +288,7 @@ function mapfunction(){
 	$("#log-in").click(()=>{
 		$('#myModal').modal('show');
 	});
+	$("#sign-up").click(()=>{
+		$('#myModalSignIn').modal("show");
+	});
 }
