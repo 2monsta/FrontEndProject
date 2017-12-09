@@ -1,4 +1,4 @@
-# FrontEndProject
+# NavAPP
 ## [Demo Link](http://binhchung.com/navapp/)
 NavAPP is an extraordinary roadtrip planner that will help you map out your next destination, look up realtime weather information, and find places to eat nearby. 
 ## Meet the Team!
